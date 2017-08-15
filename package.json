@@ -1,0 +1,9 @@
+{
+  "name": "react-firebase-starter",
+  "version": "0.0.1",
+  "description": "Repo intended to serve as a base to start new react project",
+  "main": "index.js",
+  "repository": "git@github.com:arkgast/react-firebase-starter.git",
+  "author": "Arnold Gandarillas Castillo <arkgast@gmail.com>",
+  "license": "MIT"
+}
