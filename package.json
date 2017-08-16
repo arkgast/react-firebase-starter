@@ -4,7 +4,7 @@
   "description": "Repo intended to serve as a base to start new react project",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --progress"
+    "build": "webpack --progress --colors"
   },
   "repository": "git@github.com:arkgast/react-firebase-starter.git",
   "author": "Arnold Gandarillas Castillo <arkgast@gmail.com>",
@@ -18,6 +18,8 @@
     "babel-loader": "^7.1.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "html-webpack-plugin": "^2.30.1",
     "webpack": "^3.5.4"
   }
 }
