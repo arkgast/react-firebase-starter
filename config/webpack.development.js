@@ -8,12 +8,17 @@ module.exports = new WebpackConfig.Config()
   .extend('config/webpack.base.js')
   .merge({
     devtool: 'inline-source-map',
-    entry: [
-      'react-hot-loader/patch',
-      'webpack-dev-server/client?http://localhost:3000',
-      'webpack/hot/only-dev-server',
-      './index.js'
-    ],
+    entry: {
+      vendor: [
+        'lodash'
+      ],
+      main: [
+        'react-hot-loader/patch',
+        'webpack-dev-server/client?http://localhost:3000',
+        'webpack/hot/only-dev-server',
+        './index.js'
+      ]
+    },
     devServer: {
       contentBase: resolve(__dirname, 'public'),
       clientLogLevel: 'warning',
@@ -26,7 +31,6 @@ module.exports = new WebpackConfig.Config()
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NamedModulesPlugin(),
-      new webpack.NoEmitOnErrorsPlugin(),
       new DashboardPlugin()
     ]
   })

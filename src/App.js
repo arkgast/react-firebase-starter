@@ -4,7 +4,10 @@ import React, { Component } from 'react'
 export default class App extends Component {
   render () {
     return (
-      <h1>React Firebase Starter</h1>
+      <div>
+        <h1>React Firebase Starter</h1>
+        <h2>Now it works offline and it's faster!</h2>
+      </div>
     )
   }
 }

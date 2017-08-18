@@ -1,4 +1,5 @@
 const { resolve } = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
@@ -6,22 +7,25 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
   context: resolve(__dirname, '../src'),
   output: {
-    filename: 'js/[name].bundle.js',
+    filename: 'js/[name].[hash].js',
     path: resolve(__dirname, '../public'),
     sourceMapFilename: '[file].map'
+  },
+  resolve: {
+    extensions: ['.js']
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
+        loader: 'babel-loader',
         exclude: /node_modules/,
-        use: [
-          'babel-loader'
-        ]
+        include: resolve(__dirname, '../src')
       }
     ]
   },
   plugins: [
+    new webpack.NoEmitOnErrorsPlugin(),
     new CleanWebpackPlugin(['public']),
     new HtmlWebpackPlugin({
       title: 'Firebase React Starter',
@@ -33,6 +37,12 @@ module.exports = {
         collapseWhitespace: false
       },
       chunkSortMode: 'dependency'
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor'
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'runtime'
     })
   ]
 }
