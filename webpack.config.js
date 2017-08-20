@@ -1,16 +1,9 @@
 const WebpackConfig = require('webpack-config')
 
-const TARGET = process.env.npm_lifecycle_event
+WebpackConfig.environment.setAll({
+  env: function () {
+    return process.env.NODE_ENV
+  }
+})
 
-let configFile
-
-switch (TARGET) {
-  case 'start':
-    configFile = 'config/webpack.development.js'
-    break
-  case 'build':
-    configFile = 'config/webpack.production.js'
-    break
-}
-
-module.exports = new WebpackConfig.Config().extend(configFile)
+module.exports = new WebpackConfig.Config().extend('config/webpack.[env].js')

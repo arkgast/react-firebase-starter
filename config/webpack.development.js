@@ -25,8 +25,7 @@ module.exports = new WebpackConfig.Config()
       historyApiFallback: true,
       host: '0.0.0.0',
       hot: true,
-      port: 3000,
-      quiet: true
+      port: 3000
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
