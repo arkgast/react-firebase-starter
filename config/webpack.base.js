@@ -1,7 +1,6 @@
 const { resolve } = require('path')
 const webpack = require('webpack')
-const cssnext = require('postcss-cssnext')
-const cssnano = require('cssnano')
+const autoprefixer = require('autoprefixer')
 const cssmqPacker = require('css-mqpacker')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -19,21 +18,20 @@ let styleConfig = [{
   loader: 'postcss-loader',
   options: {
     plugins: function () {
-      var tmp = []
-      if (env === 'production') {
-        tmp = [
-          cssnext,
-          cssnano({ autoprefixer: false }),
-          cssmqPacker
-        ]
-      }
-      return tmp
-    }
+      return [cssmqPacker, autoprefixer]
+    },
+    sourceMap: true
+  }
+}, {
+  loader: 'resolve-url-loader',
+  options: {
+    sourceMap: true
   }
 }, {
   loader: 'sass-loader',
   options: {
-    outputStyle: 'compressed'
+    outputStyle: 'compressed',
+    sourceMap: true
   }
 }]
 
@@ -66,6 +64,35 @@ module.exports = {
       test: /\.scss$/,
       exclude: /node_modules/,
       use: styleConfig
+    }, {
+      test: /\.(jpe?g|png|gif|svg)$/,
+      loaders: [{
+        loader: 'file-loader',
+        options: {
+          name: '[path]/[name].[hash:base64:5].[ext]',
+          publicPath: '/',
+          outputPath: 'img'
+        }
+      }, {
+        loader: 'image-webpack-loader',
+        options: {
+          progressive: true,
+          gifsicle: {
+            interlaced: false
+          },
+          optipng: {
+            optimizationLevel: 7
+          },
+          pngquant: {
+            quality: '65-90',
+            speed: 4
+          },
+          mozjpeg: {
+            quality: 70
+          }
+        }
+      }
+      ]
     }]
   },
   plugins: [
@@ -76,7 +103,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'runtime'
     }),
-    new CleanWebpackPlugin(['public']),
+    new CleanWebpackPlugin(['../public'], { allowExternal: true }),
     new HtmlWebpackPlugin({
       title: 'Firebase React Starter',
       template: 'index.html',

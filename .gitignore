@@ -1,3 +1,6 @@
 # Dirs
 public
 node_modules
+
+# Files
+*.log

@@ -32,7 +32,7 @@ in this case the id is **react-firebase-starter-d0953**. Check out this [docs][f
 - [x] [Webpack 2][webpack]
 - [x] ES6 - Modern Javascript syntax via [babel][babel]
 - [x] SASS support
-- [x] Modern CSS syntax via [postcss][postcss]
+- [x] Autoprefix CSS via [autoprefixer][autoprefixer]
 - [x] Pack same CSS media query rules into one via [postcss][postcss]
 - [x] Automatic HTML generation
 - [x] ES6 and SASS linting via [eslint][eslint] and [stylelint][stylelint]
@@ -60,6 +60,7 @@ in this case the id is **react-firebase-starter-d0953**. Check out this [docs][f
 [react]: https://facebook.github.io/react
 [webpack]: https://webpack.js.org/configuration
 [babel]: https://babeljs.io/
+[autoprefixer]: https://github.com/postcss/autoprefixer
 [postcss]: https://github.com/postcss/postcss-loader
 [eslint]: https://eslint.org
 [stylelint]: https://github.com/stylelint/stylelint
