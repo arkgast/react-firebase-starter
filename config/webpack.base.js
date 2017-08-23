@@ -57,7 +57,12 @@ module.exports = {
   module: {
     rules: [{
       test: /\.jsx?$/,
-      loader: 'babel-loader',
+      use: [{
+        loader: 'babel-loader',
+        options: {
+          cacheDirectory: '.babel-cache'
+        }
+      }],
       exclude: /node_modules/,
       include: resolve(__dirname, '../src')
     }, {

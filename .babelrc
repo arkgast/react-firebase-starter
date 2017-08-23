@@ -6,7 +6,13 @@
   "env": {
     "production": {
       "plugins": [
-        "transform-react-inline-elements"
+        "transform-react-inline-elements",
+        ["transform-runtime", {
+          "helpers": true,
+          "polifill": false,
+          "generator": false,
+          "moduleName": "babel-runtime"
+        }]
       ]
     },
     "development": {

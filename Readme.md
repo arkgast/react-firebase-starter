@@ -1,14 +1,21 @@
 # React Firebase Starter
 
-The project is running at:
+Sometimes start a new project is hard that's why this project becomes a reality.
+No configuration is needed but everything is here so you can improve or change anything you want.
 
-https://react-firebase-starter-d0953.firebaseapp.com/
+Everything is optimized to bring you and your users the best experience developing and using it.
+
+The project is running at: https://react-firebase-starter-d0953.firebaseapp.com/
 
 ## Installation
 
     $ git clone https://github.com/arkgast/react-firebase-starter
     $ cd react-firebase-starter
     $ yarn
+    - or -
+    $ npm install
+
+> To install dependencies **yarn** is recommended to install it just run `npm install yarn -g`
 
 ### Develop
     $ npm start
@@ -27,7 +34,7 @@ in this case the id is **react-firebase-starter-d0953**. Check out this [docs][f
 - [x] [React][react]
 - [ ] Redux
 - [ ] React Router v4
-- [ ] Firebase
+- [ ] Firebase authentication
 - [ ] Jest
 - [x] [Webpack 2][webpack]
 - [x] ES6 - Modern Javascript syntax via [babel][babel]
@@ -37,15 +44,16 @@ in this case the id is **react-firebase-starter-d0953**. Check out this [docs][f
 - [x] Automatic HTML generation
 - [x] ES6 and SASS linting via [eslint][eslint] and [stylelint][stylelint]
 - [x] Split webpack configuration in development and production
+- [x] Cached on startup so make next compilation faster
 
 #### Development
-- [x] Develop via [webpack-dev-server][webpack-dev-server]
+- [x] Run local server via [webpack-dev-server][webpack-dev-server]
 - [x] Hot reloading via [react-hot-reloader][react-hot-loader] and [HMR][hot-module-replacement]
 
 #### Production
 - [x] Provides an offline experience via [offline-plugin][offline-plugin]
-- [x] Separate CSS files
-- [x] Firebase deployment
+- [x] Separate CSS files via [extract-text-webpack-plugin][extract-text]
+- [x] Firebase deployment via [firebase][firebase-hosting]
 - [x] Code-splitting and async chunk loading
 - [x] Compressed assets files
 
@@ -68,3 +76,4 @@ in this case the id is **react-firebase-starter-d0953**. Check out this [docs][f
 [react-hot-loader]: https://github.com/gaearon/react-hot-loader
 [hot-module-replacement]: https://webpack.js.org/guides/hot-module-replacement
 [offline-plugin]: https://github.com/NekR/offline-plugin
+[extract-text]: https://github.com/webpack-contrib/extract-text-webpack-plugin

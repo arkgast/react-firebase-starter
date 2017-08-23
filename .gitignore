@@ -1,6 +1,7 @@
 # Dirs
 public
 node_modules
+.babel-cache
 
 # Files
 *.log
