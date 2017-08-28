@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import * as OfflinePluginRuntime from 'offline-plugin/runtime'
 import { AppContainer } from 'react-hot-loader'
 
-import App from './App'
+import App from './scenes/App'
 
 
 OfflinePluginRuntime.install()
