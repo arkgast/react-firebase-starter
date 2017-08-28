@@ -2,20 +2,32 @@ body {
   background-image: url('image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Roboto';
 
   > div {
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 5px;
-    border: 1px solid #818181;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.55);
+    padding: 3em 0;
 
-    h1,
-    h2 {
-      color: #212121;
+    h1 {
       text-align: center;
     }
+  }
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1.5em;
+  padding: 2em;
+
+  > div {
+    transition: 1s ease;
+  }
+
+  &:hover > div {
+    transform: rotate3d(10, 10, 10, 360deg);
   }
 }

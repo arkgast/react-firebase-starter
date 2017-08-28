@@ -16,6 +16,8 @@
   "author": "Arnold Gandarillas Castillo <arkgast@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "material-ui": "next",
+    "proptypes": "^1.1.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
@@ -45,6 +47,7 @@
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
     "image-webpack-loader": "^3.3.1",
+    "material-ui-icons": "^1.0.0-beta.5",
     "node-sass": "^4.5.3",
     "offline-plugin": "^4.8.3",
     "postcss-loader": "^2.0.6",
