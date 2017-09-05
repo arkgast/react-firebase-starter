@@ -7,16 +7,16 @@ import About from './scenes/About'
 import Home from './scenes/Home'
 
 
-const routes = [
-  {
+const routes = {
+  Home: {
     pathname: '/',
     text: 'Home'
   },
-  {
+  About: {
     pathname: '/about',
     text: 'About'
   }
-]
+}
 
 
 export default class Root extends Component {
@@ -26,7 +26,7 @@ export default class Root extends Component {
         <App routes={routes}>
           <Route
             exact
-            path={routes[0].pathname}
+            path={routes.Home.pathname}
             children={({ ...props }) => {
               return (
                 <Home {...props} />
@@ -35,7 +35,7 @@ export default class Root extends Component {
           />
           <Route
             exact
-            path={routes[1].pathname}
+            path={routes.About.pathname}
             children={({ ...props }) => {
               return (
                 <About {...props} />

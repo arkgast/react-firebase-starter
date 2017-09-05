@@ -11,7 +11,8 @@ import './theme.scss'
 
 export default class App extends Component {
   render () {
-    const { children } = this.props
+    const { routes, children } = this.props
+    const routeKeys = Object.keys(routes)
     return (
       <div>
         <div className='image-wrapper' />
@@ -24,9 +25,9 @@ export default class App extends Component {
             >
               React Firebase Starter
             </Typography>
-            {this.props.routes.map((route, i) => (
-              <Link key={i} to={route.pathname}>
-                <Button color='contrast'>{route.text}</Button>
+            {routeKeys.map((key, i) => (
+              <Link key={i} to={routes[key].pathname}>
+                <Button color='contrast'>{routes[key].text}</Button>
               </Link>
             ))}
           </Toolbar>
