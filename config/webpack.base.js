@@ -74,9 +74,9 @@ module.exports = {
       loaders: [{
         loader: 'file-loader',
         options: {
-          name: '[path]/[name].[hash:base64:5].[ext]',
+          name: '[path][name].[hash:base64:5].[ext]',
           publicPath: '/',
-          outputPath: 'img'
+          outputPath: 'img/'
         }
       }, {
         loader: 'image-webpack-loader',

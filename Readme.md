@@ -39,7 +39,7 @@ in this case the id is **react-firebase-starter-d0953**. Check out this [docs][f
 ## Features
 - [x] [React][react]
 - [ ] Redux
-- [ ] React Router v4
+- [x] React Router v4 (with animated transitions)
 - [ ] Firebase authentication
 - [ ] Jest
 - [x] [Webpack 2][webpack]
