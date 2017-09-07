@@ -15,12 +15,7 @@ module.exports = new WebpackConfig.Config()
   .extend('config/webpack.base.js')
   .merge({
     entry: {
-      main: './index.js',
-      vendor: [
-        'react',
-        'react-dom',
-        'lodash'
-      ]
+      main: './index.js'
     },
     devtool: 'cheap-module-source-map',
     plugins: [

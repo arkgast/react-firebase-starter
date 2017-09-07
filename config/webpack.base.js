@@ -103,7 +103,8 @@ module.exports = {
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'vendor'
+      name: 'vendor',
+      minChunks: ({ resource }) => /node_modules/.test(resource)
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'runtime'
