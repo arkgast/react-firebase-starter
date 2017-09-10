@@ -19,7 +19,7 @@ const transitionStyles = {
   exited: { opacity: 1, transform: 'rotateX(90deg)' }
 }
 
-const RotateAndFade = ({ in: inProp, children, ...props }) => (
+const RotateAndFade = ({ in: inProp, children }) => (
   <Transition in={inProp} timeout={DURATION} >
     {(state) => {
       return (
@@ -42,10 +42,7 @@ export default (ComposedComponent) => {
       const { match, ...props } = this.props
       return (
         <TransitionGroup>
-          {match && <RotateAndFade
-            children={<ComposedComponent />}
-            {...props}
-          /> }
+          { match && <RotateAndFade children={<ComposedComponent {...props} />} /> }
         </TransitionGroup>
       )
     }

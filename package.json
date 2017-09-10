@@ -16,17 +16,25 @@
   "author": "Arnold Gandarillas Castillo <arkgast@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "firebase": "^4.3.1",
+    "history": "^4.7.2",
     "material-ui": "next",
     "proptypes": "^1.1.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
-    "react-transition-group": "^2.2.0"
+    "react-router-redux": "next",
+    "react-transition-group": "^2.2.0",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-inline-elements": "^6.22.0",
     "babel-plugin-transform-runtime": "^6.23.0",

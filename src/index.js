@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import * as OfflinePluginRuntime from 'offline-plugin/runtime'
 import { AppContainer } from 'react-hot-loader'
 
-import Root from './routes'
+import Root from './configureRouter'
 
 
 OfflinePluginRuntime.install()
@@ -21,7 +21,7 @@ const render = Component => (
 render(Root)
 
 if (module.hot) {
-  module.hot.accept('./routes', () => {
+  module.hot.accept('./configureRouter', () => {
     render(Root)
   })
 }
