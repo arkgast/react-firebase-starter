@@ -3,9 +3,8 @@ import React, { Component } from 'react'
 import AppBar from 'material-ui/AppBar'
 import Toolbar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
-import Button from 'material-ui/Button'
-import { Link } from 'react-router-dom'
 
+import MenuItem from './components/MenuItem'
 import './theme.scss'
 
 
@@ -26,9 +25,12 @@ export default class App extends Component {
               React Firebase Starter
             </Typography>
             {routeKeys.map((key, i) => (
-              <Link key={i} to={routes[key].pathname}>
-                <Button color='contrast'>{routes[key].text}</Button>
-              </Link>
+              <MenuItem
+                key={i}
+                activeOnlyWhenExact={routes[key].exact}
+                to={routes[key].pathname}
+                label={routes[key].label}
+              />
             ))}
           </Toolbar>
         </AppBar>

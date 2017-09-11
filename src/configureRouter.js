@@ -17,15 +17,16 @@ const store = getStore(history)
 const routes = {
   Home: {
     pathname: '/',
-    text: 'Home'
+    label: 'Home',
+    exact: true
   },
   About: {
     pathname: '/about',
-    text: 'About'
+    label: 'About'
   },
   SignIn: {
     pathname: '/signin',
-    text: 'Sign in'
+    label: 'Sign in'
   }
 }
 

@@ -6,7 +6,7 @@ import { AppContainer } from 'react-hot-loader'
 import Root from './configureRouter'
 
 
-console.log('index', process.env)
+// Offline plugin is only necessary in production
 if (process.env.NODE_ENV === 'production') {
   const OfflinePluginRuntime = require('offline-plugin/runtime')
   OfflinePluginRuntime.install()
