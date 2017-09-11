@@ -1,13 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import * as OfflinePluginRuntime from 'offline-plugin/runtime'
 import { AppContainer } from 'react-hot-loader'
 
 import Root from './configureRouter'
 
 
-OfflinePluginRuntime.install()
+console.log('index', process.env)
+if (process.env.NODE_ENV === 'production') {
+  const OfflinePluginRuntime = require('offline-plugin/runtime')
+  OfflinePluginRuntime.install()
+}
 
 const render = Component => (
   ReactDOM.render(

@@ -19,9 +19,6 @@ module.exports = new WebpackConfig.Config()
     },
     devtool: 'cheap-module-source-map',
     plugins: [
-      new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify('production')
-      }),
       new webpack.optimize.OccurrenceOrderPlugin(),
       new webpack.optimize.MinChunkSizePlugin({minChunkSize: 10240}),
       new webpack.HashedModuleIdsPlugin(),
