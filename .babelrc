@@ -5,18 +5,20 @@
   ],
   "plugins": [
     "transform-export-extensions",
+    "transform-async-to-generator",
+    "syntax-dynamic-import",
+    ["transform-runtime", {
+      "helpers": true,
+      "polifill": false,
+      "generator": false,
+      "moduleName": "babel-runtime"
+    }],
     ["transform-object-rest-spread", { "useBuildIns": false }]
   ],
   "env": {
     "production": {
       "plugins": [
-        "transform-react-inline-elements",
-        ["transform-runtime", {
-          "helpers": true,
-          "polifill": false,
-          "generator": false,
-          "moduleName": "babel-runtime"
-        }]
+        "transform-react-inline-elements"
       ]
     },
     "development": {

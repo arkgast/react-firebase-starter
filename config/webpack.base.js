@@ -116,7 +116,10 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'runtime'
     }),
-    new webpack.optimize.MinChunkSizePlugin({minChunkSize: 1024000}),
+    new webpack.optimize.CommonsChunkPlugin({
+      children: true,
+      minChunks: 2
+    }),
     new CleanWebpackPlugin(['../public'], { allowExternal: true }),
     new HtmlWebpackPlugin({
       title: 'Firebase React Starter',

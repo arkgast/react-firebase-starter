@@ -26,7 +26,7 @@ export default class App extends Component {
             </Typography>
             {routeKeys.map((key, i) => (
               <MenuItem
-                key={i}
+                key={`menuitem-${i}`}
                 activeOnlyWhenExact={routes[key].exact}
                 to={routes[key].pathname}
                 label={routes[key].label}
