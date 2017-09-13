@@ -20,7 +20,6 @@ module.exports = new WebpackConfig.Config()
     devtool: 'cheap-module-source-map',
     plugins: [
       new webpack.optimize.OccurrenceOrderPlugin(),
-      new webpack.optimize.MinChunkSizePlugin({minChunkSize: 10240}),
       new webpack.HashedModuleIdsPlugin(),
       new webpack.optimize.UglifyJsPlugin({
         beauty: false,
@@ -44,7 +43,9 @@ module.exports = new WebpackConfig.Config()
         verbose: true,
         emitError: true
       }),
-      new BundleAnalyzerPlugin(),
+      new BundleAnalyzerPlugin({
+        analyzerMode: 'static'
+      }),
       new OfflinePlugin()
     ]
   })

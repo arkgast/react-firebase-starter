@@ -107,11 +107,16 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
-      minChunks: ({ resource }) => /node_modules/.test(resource)
+      minChunks: ({ context }) => /node_modules/.test(context)
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'react-build',
+      minChunks: ({ context }) => /node_modules\/react/.test(context)
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'runtime'
     }),
+    new webpack.optimize.MinChunkSizePlugin({minChunkSize: 1024000}),
     new CleanWebpackPlugin(['../public'], { allowExternal: true }),
     new HtmlWebpackPlugin({
       title: 'Firebase React Starter',

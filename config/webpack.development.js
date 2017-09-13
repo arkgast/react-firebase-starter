@@ -9,9 +9,6 @@ module.exports = new WebpackConfig.Config()
   .merge({
     devtool: 'inline-source-map',
     entry: {
-      vendor: [
-        'lodash'
-      ],
       main: [
         'react-hot-loader/patch',
         'webpack-dev-server/client?http://localhost:3000',
