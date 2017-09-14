@@ -1,6 +1,6 @@
 import { push } from 'react-router-redux'
 
-import { auth as Auth } from '../../services/firebase'
+import { auth as Auth } from 'Services/firebase'
 import {
   SIGN_IN_INIT,
   SIGN_IN_SUCCESS, SIGN_IN_ERROR

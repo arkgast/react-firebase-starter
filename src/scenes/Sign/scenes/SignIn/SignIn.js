@@ -6,7 +6,7 @@ import TextField from 'material-ui/TextField'
 import Grid from 'material-ui/Grid'
 import { CircularProgress } from 'material-ui/Progress'
 
-import withAnimation from '../../../../hocs/withAnimation'
+import withAnimation from 'Hocs/withAnimation'
 
 
 class SignIn extends Component {

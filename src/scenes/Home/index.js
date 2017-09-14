@@ -2,7 +2,7 @@ import React from 'react'
 
 import Typography from 'material-ui/Typography'
 
-import withAnimation from '../../hocs/withAnimation'
+import withAnimation from 'Hocs/withAnimation'
 
 
 let Home = () => (

@@ -52,7 +52,14 @@ module.exports = {
     sourceMapFilename: '[file].map'
   },
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js'],
+    alias: {
+      Components: resolve(__dirname, '../src/components'),
+      Data: resolve(__dirname, '../src/data'),
+      Hocs: resolve(__dirname, '../src/hocs'),
+      Scenes: resolve(__dirname, '../src/scenes'),
+      Services: resolve(__dirname, '../src/services')
+    }
   },
   module: {
     rules: [{
