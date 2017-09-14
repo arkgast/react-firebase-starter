@@ -22,7 +22,14 @@ module.exports = new WebpackConfig.Config()
       historyApiFallback: true,
       host: '0.0.0.0',
       hot: true,
-      port: 3000
+      port: 3000,
+      stats: {
+        version: false,
+        hash: false,
+        modules: false,
+        source: false,
+        chunks: false
+      }
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
