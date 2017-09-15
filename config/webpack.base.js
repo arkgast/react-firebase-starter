@@ -132,7 +132,7 @@ module.exports = {
       inject: true,
       minify: {
         caseSensitive: true,
-        collapseWhitespace: false
+        collapseWhitespace: true
       },
       chunkSortMode: 'dependency'
     }),

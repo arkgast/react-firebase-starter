@@ -1,5 +1,9 @@
 # Dirs
-public
+public/**
+!**/**/*.png
+!public/manifest.json
+!*/
+
 node_modules
 .babel-cache
 
