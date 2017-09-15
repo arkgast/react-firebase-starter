@@ -12,6 +12,7 @@ let Home = () => (
     <img
       width='300'
       height='300'
+      alt='React Firebase'
       src='https://cdn.worldvectorlogo.com/logos/react-native-firebase-1.svg'
     />
   </div>
