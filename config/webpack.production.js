@@ -3,12 +3,12 @@ const WebpackConfig = require('webpack-config')
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const OfflinePlugin = require('offline-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 /**
  * Review this two plugins, they seems to be pretty interesting
  * DllPlugin
- * SWPrecacheWebpackPlugin
  * */
 
 module.exports = new WebpackConfig.Config()
@@ -20,11 +20,18 @@ module.exports = new WebpackConfig.Config()
     devtool: 'cheap-module-source-map',
     plugins: [
       new webpack.optimize.OccurrenceOrderPlugin(),
+      new CleanWebpackPlugin(['../public'], {
+        allowExternal: true,
+        exclude: [
+          'manifest.json',
+          'img/icons'
+        ]
+      }),
       new webpack.HashedModuleIdsPlugin(),
       new webpack.optimize.UglifyJsPlugin({
         beauty: false,
         mangle: {
-          screw_ie8: false,
+          screw_ie8: true,
           keep_fnames: true
         },
         compress: {
@@ -41,11 +48,28 @@ module.exports = new WebpackConfig.Config()
       }),
       new DuplicatePackageCheckerPlugin({
         verbose: true,
-        emitError: true
+        emitError: false
       }),
       new BundleAnalyzerPlugin({
         analyzerMode: 'static'
       }),
-      new OfflinePlugin()
+      new OfflinePlugin({
+        autoUpdate: true,
+        caches: {
+          main: [':rest:'],
+          additional: [':externals:']
+        },
+        externals: [
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500',
+          'https://fonts.googleapis.com/icon?family=Material+Icons'
+        ],
+        responseStrategy: 'cache-first',
+        safeToUseOptionalCaches: true,
+        ServiceWorker: {
+          navigateFallbackURL: '/',
+          minify: true
+        },
+        AppCache: false
+      })
     ]
   })

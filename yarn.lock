@@ -1499,9 +1499,9 @@ clean-css@4.1.x:
   dependencies:
     source-map "0.5.x"
 
-clean-webpack-plugin@^0.1.16:
+"clean-webpack-plugin@https://github.com/arkgast/clean-webpack-plugin":
   version "0.1.16"
-  resolved "https://registry.yarnpkg.com/clean-webpack-plugin/-/clean-webpack-plugin-0.1.16.tgz#422a8e150bf3d5abfd3d14bfacb070e80fb2e23f"
+  resolved "https://github.com/arkgast/clean-webpack-plugin#f5c5e1ba0ae3eb0fa4dbf9e1caafa7fbd9d5a20f"
   dependencies:
     rimraf "~2.5.1"
 

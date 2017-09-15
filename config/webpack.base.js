@@ -2,7 +2,6 @@ const { resolve } = require('path')
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer')
 const cssmqPacker = require('css-mqpacker')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
@@ -127,7 +126,6 @@ module.exports = {
       children: true,
       minChunks: 2
     }),
-    new CleanWebpackPlugin(['../public'], { allowExternal: true }),
     new HtmlWebpackPlugin({
       title: 'Firebase React Starter',
       template: 'index.html',
