@@ -3,18 +3,45 @@ import React, { Component } from 'react'
 import AppBar from 'material-ui/AppBar'
 import Toolbar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
+import { withStyles } from 'material-ui/styles'
 
 import MenuItem from './components/MenuItem'
-import './theme.scss'
 
 
-export default class App extends Component {
+const styles = {
+  '@global': {
+    body: {
+      margin: 0
+    },
+    a: {
+      textDecoration: 'none'
+    }
+  },
+  imageBackground: {
+    backgroundImage: `url(${require('./image.jpg')})`,
+    bacgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    filter: 'grayscale(100%)',
+    height: '100%',
+    position: 'absolute',
+    width: '100%',
+    zIndex: '-1'
+  },
+  pagesContainer: {
+    marginTop: '2em',
+    h1: {
+      textAlign: 'center'
+    }
+  }
+}
+
+class App extends Component {
   render () {
-    const { routes, children } = this.props
+    const { routes, children, classes } = this.props
     const routeKeys = Object.keys(routes)
     return (
       <div>
-        <div className='image-wrapper' />
+        <div className={classes.imageBackground} />
         <AppBar position='static'>
           <Toolbar>
             <Typography
@@ -41,3 +68,6 @@ export default class App extends Component {
     )
   }
 }
+
+
+export default withStyles(styles)(App)

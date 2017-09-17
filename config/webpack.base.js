@@ -57,7 +57,8 @@ module.exports = {
       Data: resolve(__dirname, '../src/data'),
       Hocs: resolve(__dirname, '../src/hocs'),
       Scenes: resolve(__dirname, '../src/scenes'),
-      Services: resolve(__dirname, '../src/services')
+      Services: resolve(__dirname, '../src/services'),
+      Styles: resolve(__dirname, '../src/styles')
     }
   },
   module: {
