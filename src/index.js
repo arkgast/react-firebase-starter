@@ -26,5 +26,6 @@ render(Root)
 if (module.hot) {
   module.hot.accept('./configureRouter', () => {
     render(Root)
+    console.clear()
   })
 }

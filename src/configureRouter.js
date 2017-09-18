@@ -3,11 +3,12 @@ import React, { Component } from 'react'
 import { Provider } from 'react-redux'
 import { Route } from 'react-router-dom'
 import { ConnectedRouter } from 'react-router-redux'
+import TransitionGroup from 'react-transition-group/TransitionGroup'
 
-import asyncComponent from './hocs/asyncComponent.js'
+import asyncComponent from 'Hocs/asyncComponent.js'
+import AnimatedSwitch from 'Components/AnimatedSwitch'
 import store, { history } from './configureStore'
 import App from './scenes/App'
-
 
 const AsyncHome = asyncComponent(() => import('./scenes/Home'))
 const AsyncAbout = asyncComponent(() => import('./scenes/About'))
@@ -40,17 +41,28 @@ export default class Root extends Component {
       <Provider store={store}>
         <ConnectedRouter history={history}>
           <App routes={routes}>
-            {routeKeys.map((key, i) => (
-              <Route
-                key={`route-${i}`}
-                exact={routes[key].exact}
-                path={routes[key].pathname}
-                children={({ ...props }) => {
-                  const Component = routes[key].component
-                  return <Component {...props} />
-                }}
-              />
-            ))}
+            <Route
+              render={({ location }) => (
+                <TransitionGroup>
+                  <AnimatedSwitch
+                    key={location.key}
+                    location={location}
+                  >
+                    {routeKeys.map((key, i) => (
+                      <Route
+                        key={`route-${i}`}
+                        exact={routes[key].exact}
+                        path={routes[key].pathname}
+                        children={({ ...props }) => {
+                          const Component = routes[key].component
+                          return <Component {...props} />
+                        }}
+                      />
+                    ))}
+                  </AnimatedSwitch>
+                </TransitionGroup>
+              )}
+            />
           </App>
         </ConnectedRouter>
       </Provider>

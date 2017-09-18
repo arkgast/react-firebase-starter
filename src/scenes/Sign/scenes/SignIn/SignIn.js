@@ -5,8 +5,16 @@ import Button from 'material-ui/Button'
 import TextField from 'material-ui/TextField'
 import Grid from 'material-ui/Grid'
 import { CircularProgress } from 'material-ui/Progress'
+import { withStyles } from 'material-ui/styles'
 
-import withAnimation from 'Hocs/withAnimation'
+import Styles from 'Styles/base'
+
+const styles = {
+  page: {
+    ...Styles.page,
+    width: '100%'
+  }
+}
 
 
 class SignIn extends Component {
@@ -45,8 +53,9 @@ class SignIn extends Component {
     this.props.signIn(email, password)
   }
   render () {
+    const { classes } = this.props
     return (
-      <Grid container justify='center' spacing={0}>
+      <Grid container justify='center' spacing={0} className={classes.page}>
         <Grid item md={3} xs={6}>
           <Paper style={{ display: 'flex', flexDirection: 'column' }}>
             <TextField
@@ -80,4 +89,4 @@ class SignIn extends Component {
 }
 
 
-export default withAnimation(SignIn)
+export default withStyles(styles)(SignIn)

@@ -3,7 +3,6 @@ import React from 'react'
 import Typography from 'material-ui/Typography'
 import { withStyles } from 'material-ui/styles'
 
-import withAnimation from 'Hocs/withAnimation'
 import Styles from 'Styles/base'
 
 
@@ -41,4 +40,4 @@ let Home = ({ classes }) => (
 )
 
 
-export default withAnimation(withStyles(styles)(Home))
+export default withStyles(styles)(Home)

@@ -27,11 +27,8 @@ const styles = {
     width: '100%',
     zIndex: '-1'
   },
-  pagesContainer: {
-    marginTop: '2em',
-    h1: {
-      textAlign: 'center'
-    }
+  pageContainer: {
+    marginTop: '3em'
   }
 }
 
@@ -61,7 +58,7 @@ class App extends Component {
             ))}
           </Toolbar>
         </AppBar>
-        <div className='pages-container'>
+        <div className={classes.pageContainer}>
           {children}
         </div>
       </div>
