@@ -10,7 +10,38 @@
     "build": "NODE_ENV=production webpack --progress --colors",
     "start": "NODE_ENV=development webpack-dev-server --progress --colors",
     "start:dash": "NODE_ENV=development webpack-dashboard -- webpack-dev-server --config ./webpack.config.js",
+    "test": "jest",
     "deploy": "firebase deploy"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "<rootDir>/coverage",
+    "verbose": true,
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules"
+    ],
+    "modulePaths": [
+      "<rootDir>/src"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/public"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|svg|ttf|woff|woff2)$": "<rootDir>/src/components/__mocks__/fileTransformer.js",
+      "^Components(.*)$": "<rootDir>/src/components",
+      "^Data(.*)$": "<rootDir>/src/data",
+      "^Hocs(.*)$": "<rootDir>/src/hocs",
+      "^Scenes(.*)$": "<rootDir>/src/scenes",
+      "^Services(.*)$": "<rootDir>/src/services",
+      "^Styles(.*)$": "<rootDir>/src/styles"
+    }
   },
   "repository": "git@github.com:arkgast/react-firebase-starter.git",
   "author": "Arnold Gandarillas Castillo <arkgast@gmail.com>",
@@ -34,6 +65,7 @@
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
+    "babel-plugin-dynamic-import-node": "^1.1.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-export-extensions": "^6.22.0",
@@ -48,6 +80,7 @@
     "css-loader": "^0.28.5",
     "css-mqpacker": "^6.0.1",
     "duplicate-package-checker-webpack-plugin": "^1.2.5",
+    "enzyme": "^2.9.1",
     "eslint": "^4.4.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-config-standard-jsx": "^4.0.2",
@@ -60,11 +93,13 @@
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
     "image-webpack-loader": "^3.3.1",
+    "jest": "^21.1.0",
     "material-ui-icons": "^1.0.0-beta.5",
     "node-sass": "^4.5.3",
     "offline-plugin": "^4.8.3",
     "postcss-loader": "^2.0.6",
     "react-hot-loader": "next",
+    "react-test-renderer": "^15.6.1",
     "resolve-url-loader": "^2.1.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",

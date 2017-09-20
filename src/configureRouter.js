@@ -10,6 +10,7 @@ import AnimatedSwitch from 'Components/AnimatedSwitch'
 import store, { history } from './configureStore'
 import App from './scenes/App'
 
+
 const AsyncHome = asyncComponent(() => import('./scenes/Home'))
 const AsyncAbout = asyncComponent(() => import('./scenes/About'))
 const AsyncSignIn = asyncComponent(() => import('./scenes/Sign/scenes/SignIn'))

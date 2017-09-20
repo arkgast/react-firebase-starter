@@ -7,5 +7,7 @@ public/**
 node_modules
 .babel-cache
 
+coverage
+
 # Files
 *.log

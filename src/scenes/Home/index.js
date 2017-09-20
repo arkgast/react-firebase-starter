@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Typography from 'material-ui/Typography'
 import { withStyles } from 'material-ui/styles'
@@ -38,6 +39,10 @@ let Home = ({ classes }) => (
     />
   </div>
 )
+
+Home.propTypes = {
+  classes: PropTypes.object.isRequired
+}
 
 
 export default withStyles(styles)(Home)
