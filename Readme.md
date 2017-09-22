@@ -1,5 +1,9 @@
 # React Firebase Starter
 
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/react-firebase-starter)
+
 Sometimes start a new project is hard that's why this project becomes a reality.
 No configuration is needed but everything is here so you can improve or change anything you want.
 
