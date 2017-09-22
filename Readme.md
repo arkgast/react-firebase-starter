@@ -2,6 +2,7 @@
 
 [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+[![Coverage Status](https://coveralls.io/repos/github/arkgast/react-firebase-starter/badge.svg?branch=master)](https://coveralls.io/github/arkgast/react-firebase-starter?branch=master)
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/react-firebase-starter)
 
 Sometimes start a new project is hard that's why this project becomes a reality.
@@ -42,10 +43,10 @@ in this case the id is **react-firebase-starter-d0953**. Check out this [docs][f
 
 ## Features
 - [x] [React][react]
-- [ ] Redux
+- [x] Redux
 - [x] React Router v4 (with animated transitions)
-- [ ] Firebase authentication
-- [ ] Jest
+- [x] Firebase authentication
+- [x] Jest
 - [x] [Webpack 2][webpack]
 - [x] ES6 - Modern Javascript syntax via [babel][babel]
 - [x] SASS support
