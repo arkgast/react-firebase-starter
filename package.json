@@ -4,8 +4,8 @@
   "description": "Repo intended to serve as a base to start new react project",
   "main": "index.js",
   "scripts": {
-    "lint:js": "eslint src/**/*.js",
-    "lint:scss": "stylelint src/**/*.scss --fix",
+    "lint:js": "eslint src/ --ext .js",
+    "lint:scss": "stylelint src/**/*.scss",
     "lint": "npm run lint:js && npm run lint:scss",
     "build": "NODE_ENV=production webpack --progress --colors",
     "start": "NODE_ENV=development webpack-dev-server --progress --colors",
@@ -64,6 +64,7 @@
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
+    "babel-eslint": "^8.0.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-dynamic-import-node": "^1.1.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
