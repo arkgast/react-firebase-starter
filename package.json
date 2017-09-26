@@ -11,6 +11,7 @@
     "start": "NODE_ENV=development webpack-dev-server --progress --colors",
     "start:dash": "NODE_ENV=development webpack-dashboard -- webpack-dev-server --config ./webpack.config.js",
     "test": "jest",
+    "coveralls": "jest && cat ./coverage/lcov.info | coveralls",
     "deploy": "firebase deploy"
   },
   "jest": {
@@ -78,6 +79,7 @@
     "babel-runtime": "^6.26.0",
     "clean-webpack-plugin": "https://github.com/arkgast/clean-webpack-plugin",
     "compression-webpack-plugin": "^1.0.0",
+    "coveralls": "^2.13.1",
     "css-loader": "^0.28.5",
     "css-mqpacker": "^6.0.1",
     "duplicate-package-checker-webpack-plugin": "^1.2.5",
