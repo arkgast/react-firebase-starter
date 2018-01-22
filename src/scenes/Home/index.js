@@ -1,11 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import Typography from 'material-ui/Typography'
 import { withStyles } from 'material-ui/styles'
 
 import Styles from 'Styles/base'
-
 
 const styles = {
   page: {
@@ -43,6 +41,5 @@ let Home = ({ classes }) => (
 Home.propTypes = {
   classes: PropTypes.object.isRequired
 }
-
 
 export default withStyles(styles)(Home)

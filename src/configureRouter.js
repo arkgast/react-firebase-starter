@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import { Provider } from 'react-redux'
 import { Route } from 'react-router-dom'
 import { ConnectedRouter } from 'react-router-redux'
@@ -9,7 +8,6 @@ import asyncComponent from 'Hocs/asyncComponent.js'
 import AnimatedSwitch from 'Components/AnimatedSwitch'
 import store, { history } from './configureStore'
 import App from './scenes/App'
-
 
 const AsyncHome = asyncComponent(() => import('./scenes/Home'))
 const AsyncAbout = asyncComponent(() => import('./scenes/About'))
@@ -33,7 +31,6 @@ const routes = {
     component: AsyncSignIn
   }
 }
-
 
 export default class Root extends Component {
   render () {

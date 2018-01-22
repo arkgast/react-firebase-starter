@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-
 import AppBar from 'material-ui/AppBar'
 import Toolbar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
 import { withStyles } from 'material-ui/styles'
 
 import MenuItem from './components/MenuItem'
-
 
 const styles = {
   '@global': {
@@ -65,6 +63,5 @@ class App extends Component {
     )
   }
 }
-
 
 export default withStyles(styles)(App)

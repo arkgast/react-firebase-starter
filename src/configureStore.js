@@ -5,7 +5,6 @@ import { routerMiddleware } from 'react-router-redux'
 
 import rootReducer from './rootReducer'
 
-
 let middlewares = [thunkMiddleware]
 
 if (process.env.NODE_ENV !== 'production') {

@@ -1,10 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-
 import { AppContainer } from 'react-hot-loader'
 
 import Root from './configureRouter'
-
 
 // Offline plugin is only necessary in production
 if (process.env.NODE_ENV === 'production') {

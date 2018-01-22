@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const DashboardPlugin = require('webpack-dashboard/plugin')
 const WebpackConfig = require('webpack-config')
 
-
 module.exports = new WebpackConfig.Config()
   .extend('config/webpack.base.js')
   .merge({

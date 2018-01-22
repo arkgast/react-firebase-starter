@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import Paper from 'material-ui/Paper'
 import Button from 'material-ui/Button'
 import TextField from 'material-ui/TextField'
@@ -15,7 +14,6 @@ const styles = {
     width: '100%'
   }
 }
-
 
 class SignIn extends Component {
   constructor (props) {
@@ -87,6 +85,5 @@ class SignIn extends Component {
     )
   }
 }
-
 
 export default withStyles(styles)(SignIn)

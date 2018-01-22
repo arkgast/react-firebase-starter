@@ -1,7 +1,4 @@
 {
-  "rules": {
-    no-multiple-empty-lines: ["error", {"max": 2}]
-  },
   "extends": ["standard", "standard-jsx"],
   "parser": "babel-eslint",
   "env": {

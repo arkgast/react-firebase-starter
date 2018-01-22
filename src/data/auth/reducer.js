@@ -3,7 +3,6 @@ import {
   SIGN_IN_SUCCESS, SIGN_IN_ERROR
 } from './actionTypes'
 
-
 const initialState = {
   authenticated: false,
   isFetching: false,

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-
 export default (importComponent) => {
   return class AsyncComponent extends Component {
     constructor (props) {
