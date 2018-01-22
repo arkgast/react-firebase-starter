@@ -88,7 +88,6 @@ module.exports = {
       }, {
         loader: 'image-webpack-loader',
         options: {
-          progressive: true,
           gifsicle: {
             interlaced: false
           },
@@ -100,6 +99,7 @@ module.exports = {
             speed: 4
           },
           mozjpeg: {
+            progressive: true,
             quality: 70
           }
         }

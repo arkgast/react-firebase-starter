@@ -3,7 +3,7 @@ import React from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { mount } from 'enzyme'
 
-import MenuItem from './index'
+import MenuItem from '../../../../../src/scenes/App/components/MenuItem'
 
 
 describe('<MenuItem />', () => {

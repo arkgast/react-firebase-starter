@@ -1,6 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import Home from './index'
+
+import Home from '../../../src/scenes/Home'
 
 
 describe('<Home />', () => {

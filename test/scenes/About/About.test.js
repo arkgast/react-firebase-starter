@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount } from 'enzyme'
-import About from './index'
+import About from '../../../src/scenes/About'
 
 
 describe('<About />', () => {

@@ -7,7 +7,7 @@ import Button from 'material-ui/Button'
 const MenuItem = ({ label, to, activeOnlyWhenExact }) => (
   <Route path={to} exact={activeOnlyWhenExact} children={({ match }) => (
     <Link to={to}>
-      <Button color={match ? 'accent' : 'contrast'}>{label}</Button>
+      <Button color={match ? 'accent' : 'primary'}>{label}</Button>
     </Link>
   )} />
 )

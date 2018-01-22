@@ -35,14 +35,15 @@
       "<rootDir>/public"
     ],
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|svg|ttf|woff|woff2)$": "<rootDir>/src/components/__mocks__/fileTransformer.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|svg|ttf|woff|woff2)$": "<rootDir>/test/__mocks__/fileTransformer.js",
       "^Components(.*)$": "<rootDir>/src/components",
       "^Data(.*)$": "<rootDir>/src/data",
       "^Hocs(.*)$": "<rootDir>/src/hocs",
       "^Scenes(.*)$": "<rootDir>/src/scenes",
       "^Services(.*)$": "<rootDir>/src/services",
       "^Styles(.*)$": "<rootDir>/src/styles"
-    }
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/test/setup.js"
   },
   "repository": "git@github.com:arkgast/react-firebase-starter.git",
   "author": "Arnold Gandarillas Castillo <arkgast@gmail.com>",
@@ -84,6 +85,7 @@
     "css-mqpacker": "^6.0.1",
     "duplicate-package-checker-webpack-plugin": "^2.1.0",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.16.0",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-config-standard-jsx": "^4.0.2",
